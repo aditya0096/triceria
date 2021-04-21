@@ -8,7 +8,7 @@
             "availableSizes": ["Half", "Full"]
         },
 
-        {   "id":"2",
+        {   "_id":"2",
             "title":"Chicken Tandoori",
             "image":"/images/chicken-tandoori.jpg",
             "description": "Tandoori Chicken - an iconic restaurant style smoky grilled chicken appetizer dish. It's authentic, easy and the best.",
@@ -16,7 +16,7 @@
             "quantity": ["Half", "Full"]
         },
 
-        {   "id":"3",
+        {   "_id":"3",
             "title":"Chicken Wraps",
             "image":"/images/chicken-wraps.jpg",
             "description": "Chicken wraps are one of the easiest and quickest meals that can be made for lunch or dinner. It is also one of the few recipes that can be prepared using leftover chicken. All you need is cooked chicken, some vegetables and spices, a favourite spread and a tortilla. The chicken wrap is ready in under 20 minutes",
@@ -24,21 +24,22 @@
             "quantity": ["Half", "Full"]
         },
 
-        {   "id":"4",
+        {   "_id":"4",
             "title":"Fish Curry",
             "image":"/images/fish-curry.jpg",
             "description": "India is blessed with bountiful beaches and flowing rivers. Majestic waters give it an amazing coastline. Coastline implying love for fishes. Fish is a staple diet for many. Every curry has a special method. ",
             "price":250,
             "quantity": ["Half", "Full"]
         },
-        {   "id":"5",
+        {   "_id":"5",
             "title":"Grilled Burger",
             "image":"/images/grilled-burger.jpg",
             "description": "The key to juicy grilled burgers is choosing the right type of ground beef, not overworking the patties, and setting up a two-zone fire on the grill.",
             "price":100
         },
 
-        {   "id":"6",
+        {   
+            "_id":"6",
             "title":"Panner Butter Masala",
             "image":"/images/paneer-butter-masala.jpg",
             "description": "Paneer Butter masala is one of the most loved paneer recipe by readers. A mildly spiced restaurant style dish of paneer cooked in tomatoes cashews butter and cream.",
