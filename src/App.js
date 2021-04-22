@@ -13,6 +13,23 @@ class App extends React.Component {
       sort:"",
     };
   }
+  removeFromCart = (product) => {
+    const cartItems = this.state.cartItems.slice();
+    cartItems.forEach(item=>{
+      if(item._id == product._id){
+        if(item.count == 1){
+          this.setState({
+          cartItems: cartItems.filter((x)=>x._id !== product._id),
+          });
+        }
+        else{
+          item.count--;
+          this.setState({cartItems})
+        }  
+      }
+    });
+  };
+
   addToCart = (product) => {
     const cartItems = this.state.cartItems.slice();
     let alreadyInCart = false;
@@ -31,14 +48,14 @@ class App extends React.Component {
   return (
     <div className="grid-container">
       <header>
-        <a href="/">React Shopping Cart</a>
+        <a href="/">Food Ordering System</a>
       </header>
     <main> 
       <div className="content">
         <div className="main"> 
           <Products products={this.state.products} addToCart={this.addToCart}></Products>
         </div>
-        <div className="sidebar"><Cart cartItems={this.state.cartItems} /></div>
+        <div className="sidebar"><Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart}/></div>
       </div>  
     </main>
     <footer>All right is reserved</footer>

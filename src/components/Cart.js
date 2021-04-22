@@ -5,22 +5,52 @@ export default class Cart extends Component {
         const {cartItems} = this.props;
         return (
             <div>
-                {cartItems.lenght === 0 ? ( <div className="cart-header">Cart is Empty</div>
-                ) : ( <div className="cart-header">You have {cartItems.length} in the cart{""}
+                {cartItems.lenght === 0 ? ( 
+                <div className="cart-header">Cart is Empty</div>
+                ) : ( 
+                <div className="cart-header">
+                    You have {cartItems.length} in the cart{""}
                 </div>
                 )}
-            </div>
+
+                 {/* CART SECTION  */}
+
             <div>
                 <div className="cart">
                     <ul className="cart-items">
                         {cartItems.map(item => (
-                            <li key={cartItems._id}>
-                                
+                            <li key={item._id}>
+                                <div>
+                                    <img src={item.image} alt={item.title}></img>
+                                </div>
+                                <div>
+                                    <div>{item.title}</div>
+                                    <div className="right">
+                                        Rs-{item.price} x {item.count}
+                                        <button  className = "button" onClick={()=>this.props.removeFromCart(item)}>Remove</button>
+                                    </div>
+                                </div>
                             </li>
                         ))}
                     </ul>
                 </div>
+                {cartItems.length !==0 && ( 
+                    <div className="cart">
+                        <div className="total">
+                            <div>
+                            Total{" "}- Rs-{cartItems.reduce((a,c) => a + c.price * c.count, 0)}
+                            </div>
+                            <button className="button primary">Proceed</button>
+                        </div>
+                    </div>
+                )}            
+               
+               
+
             </div>
+            
+        </div>
+            
         )
     }
 }
